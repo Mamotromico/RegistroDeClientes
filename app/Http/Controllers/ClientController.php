@@ -14,17 +14,9 @@ class ClientController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $clients = Client::all();
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return $clients->toJson();
     }
 
     /**
@@ -35,7 +27,19 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'cpf' => 'required'
+        ]);
+
+        $client = Client::create([
+            'name' => $validatedData['name'],
+            'email' => $validatedData['email'],
+            'cpf' => $validatedData['cpf']
+        ]);
+
+        return response()->json('Client added');
     }
 
     /**
@@ -46,18 +50,7 @@ class ClientController extends Controller
      */
     public function show(Client $client)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Client  $client
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Client $client)
-    {
-        //
+        return $client->toJson();
     }
 
     /**
@@ -69,7 +62,19 @@ class ClientController extends Controller
      */
     public function update(Request $request, Client $client)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'cpf' => 'required'
+        ]);
+
+        $client->name = $validatedData['name'];
+        $client->email = $validatedData['email'];
+        $client->cpf = $validatedData['cpf'];
+
+        $client->update();
+
+        return response()->json('Client updated');
     }
 
     /**
@@ -80,6 +85,6 @@ class ClientController extends Controller
      */
     public function destroy(Client $client)
     {
-        //
+
     }
 }
