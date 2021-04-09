@@ -48,9 +48,9 @@ function Index({authenticated}) {
         return (
             <ListItem component={Grid} item xs={12} md={6} lg={4} key={id}>
                 <Card component={Grid} spacing={1} container direction="column">
-                    <Typography component={Grid} item align='center' variant='h6'>{name}</Typography>
-                    <Typography style={{paddingLeft: '1em'}} component={Grid} item>{email}</Typography>
-                    <Typography style={{paddingLeft: '1em'}} component={Grid} item>{cpfMask(cpf)}</Typography>
+                    <Typography noWrap component={Grid} item align='center' variant='h6'>{name}</Typography>
+                    <Typography noWrap style={{paddingLeft: '1em'}} component={Grid} item>{email}</Typography>
+                    <Typography noWrap style={{paddingLeft: '1em'}} component={Grid} item>{cpfMask(cpf)}</Typography>
                     <Grid container item>
                         <Tooltip title="Delete" aria-label="delete">
                             <IconButton onClick={(e) => {deleteClient(id)}}>
