@@ -16,7 +16,7 @@ git clone https://github.com/Mamotromico/RegistroDeClientes.git
 cd RegistroDeClientes
 ```
 
-Copie o arquivo .env.example fornecido e adicione informações aos seguintes campos:
+Copie o arquivo .env.example fornecido e adicione informações aos seguintes campos no novo arquivo .env:
 
 - DEFAULT_USER_NAME
 - DEFAULT_USER_EMAIL
