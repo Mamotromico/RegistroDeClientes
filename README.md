@@ -18,7 +18,6 @@ cd RegistroDeClientes
 
 Copie o arquivo .env.example fornecido e adicione informações aos seguintes campos:
 
-- DB_DATABASE
 - DEFAULT_USER_NAME
 - DEFAULT_USER_EMAIL
 - DEFAULT_USER_PASSWORD
