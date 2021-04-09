@@ -37,7 +37,7 @@ docker run --rm -u "$(id -u):$(id -g)" -v $(pwd):/opt -w /opt laravelsail/php80-
 Suba a imagem com:
 
 ```
-./vendor/bin/sail up -d
+./vendor/bin/sail up
 ```
 
 Após, produza a chave de projeto Laravel:
