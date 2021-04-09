@@ -15,7 +15,7 @@ function Index({authenticated, signIn}) {
         )
     } else if(authenticated === false){
         return(
-            <Grid item xs={4}>
+            <Grid item container direction="row" justify="center" alignItems="center" xs={12}>
                 <Card>
                     <CardContent>
                         <form onSubmit={(e) => {
@@ -66,7 +66,18 @@ function Index({authenticated, signIn}) {
             </Grid>
         )
     } else {
-        return (<CircularProgress/>)
+        return (
+            <Grid
+                xs={12}
+                item
+                container
+                direction="row"
+                justify="center"
+                alignItems="center"
+            >
+                <CircularProgress />
+            </Grid>
+        )
     }
 }
 

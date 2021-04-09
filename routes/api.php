@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/clients', 'ClientController@index')->middleware('auth:sanctum');
 Route::post('/clients', 'ClientController@store')->middleware('auth:sanctum');
-Route::get('/clients/{id}','ClientController@show')->middleware('auth:sanctum');
-Route::put('/clients/{id}','ClientController@update')->middleware('auth:sanctum');
-Route::post('/clients/{id}/delete', 'ClientController@destroy')->middleware('auth:sanctum');
+Route::get('/clients/{client}','ClientController@show')->middleware('auth:sanctum');
+Route::put('/clients/{client}','ClientController@update')->middleware('auth:sanctum');
+Route::post('/clients/{client}/delete', 'ClientController@destroy')->middleware('auth:sanctum');
 
 Auth::routes();
 
