@@ -3,7 +3,6 @@ require('./bootstrap');
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import 'fontsource-roboto';
 import { Sanctum } from "react-sanctum";
 
 import Index from './views/client/index';
@@ -24,10 +23,8 @@ function App() {
         <Sanctum config={sanctumConfig}>
             <CssBaseline />
             <BrowserRouter>
-                <Grid wrap='nowrap' component='span' direction='column' justify="flex-start" container style={{ minHeight: '100vh'}}>
-                    <Grid item>
-                        <NavBar />
-                    </Grid>
+                <NavBar />
+                <Grid component='span' direction='column' justify="flex-start" container >
                     <Grid xs={true} item container>
                         <Switch>
                             <Route exact path="/">
