@@ -61,4 +61,4 @@ Compile e publique o frontend:
 ./vendor/bin/sail npm run dev
 ```
 
-Depois disso tudo é só ir para seu localhost e logar com o usuário padrão definido no seu arquivo .env
+Depois disso tudo é só ir para seu [localhost](http://localhost) e logar com o usuário padrão definido no seu arquivo .env
